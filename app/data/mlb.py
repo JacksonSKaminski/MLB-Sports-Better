@@ -41,8 +41,8 @@ def getGamesByDate(game_date: date) -> List[Game]:
                 game_start_time = datetime.fromisoformat(game["game_datetime"].replace("Z", "+00:00")),
 
                 game_id = int(game["game_id"]),
-                away_team = str(game["away_name"]),
-                home_team = str(game["home_name"]),
+                away_team = str(game["away_id"]),
+                home_team = str(game["home_id"]),
                 away_pitcher = str(game["away_probable_pitcher"]),
                 home_pitcher = str(game["home_probable_pitcher"]),
                 series_status = str(game["series_status"]),
@@ -53,6 +53,6 @@ def getGamesByDate(game_date: date) -> List[Game]:
 
             games_list.append(gameData)
 
-    gamesCache[date] = games_list
+    gamesCache[game_date] = games_list
     return games_list
         
