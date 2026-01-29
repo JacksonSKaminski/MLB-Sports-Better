@@ -10,7 +10,7 @@ html {
 body {
     margin: 0;
     padding: 20px;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
     background: #232423;
     color: #e8eefc;
 }
@@ -42,6 +42,7 @@ input[type="date"] {
     margin: 10px auto;
     padding: 16px;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 .site-footer {

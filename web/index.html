@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>MLB Predictor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
 
@@ -19,10 +20,67 @@
         </section>
     </main>
 
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal">
+
+            <div class="modalHeader">
+                <p class="gameId">GameId: XXXXXX</p>
+                <button id = "modalClose" class="modal-close">X</button>
+            </div>
+
+            <div class="modalBody">
+                <div class="topSection">
+                    <div class="gameDisplayContainer" id="modalAwayTeam">
+                        <img src="src/logos/CLE.png">
+                        <div class="modalTeamStats">
+                            <h3><strong>Clevaland Guardians</strong></h3>
+                            <p style="color: rgb(222, 220, 220);">12-2</p>
+                        </div>
+
+                    </div>
+                    <div class="gameDisplayContainer" id="modalGameComp">
+                        <div class="gameDisplayInformation">
+                            <p style="font-size: 30px;"><strong>Feb 1</strong></p>
+                            <p class="gameTimeDisplay">12:30 PM</p>
+                        </div>
+
+                    </div>
+                    <div class="gameDisplayContainer" id="modalHomeTeam">
+                        <img src="src/logos/NYM.png">
+                            <div class="modalTeamStats">
+                                <h3><strong>New York Mets</strong></h3>
+                                <p style="color: rgb(222, 220, 220);">6-8</p>
+
+                            </div>
+                    </div>
+
+                </div>
+
+                <div id="bottomSection" class="bottom-section">
+                    <div class="bottom-header">
+                        <button id="toggleBottom">▲</button>
+                    </div>
+
+                    <div class="bottom-body">
+                        <div class="betting">
+                             <!-- betting content -->
+                        </div>
+
+                        <div class="ai">
+                            <!-- AI prediction content -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div> 
+    </div>
+
     <footer class = "site-footer">
         <small>Data via MLB Stats API</small>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

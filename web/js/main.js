@@ -66,7 +66,7 @@ function gameCardHTML(g){
     }
 
     return `
-        <article class = "card" style="
+        <article class = "card" data-gameid="${g.game_id}" style="
             background-image: linear-gradient(
                 125deg, 
                 ${awayTeam.primary} 0%,
