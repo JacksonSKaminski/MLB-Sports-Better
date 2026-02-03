@@ -1,28 +1,8 @@
 const gameDateInput = document.getElementById("gameDate");
 const gamesGrid = document.getElementById("gamesGrid")
 
-let TEAM_MAP = {};
-fetch("/src/teamMap.json")
-    .then(r => r.json())
-    .then(data => TEAM_MAP = data);
-
-function getTeamById(id) {
-    return TEAM_MAP[String(id)] || {
-        abbr: "UNK",
-        logo: "/src/logos/default.png",
-        primary: "#ff0000"
-    };
-}
-
-function setTodayAsDefault() {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2,"0");
-
-    const formatted = `${year}-${month}-${day}`;
-    gameDateInput.value = formatted;
-}
+import { getTeamById } from "./teams.js";
+import { setTodayAsDefault } from "./utils.js";
 
 function ISOtoTime(ISOTimestamp){
     const date = new Date(ISOTimestamp);
@@ -62,7 +42,7 @@ function gameCardHTML(g){
         
         default:
             statusText = g.status;
-            statusColor = "#e8eefc"
+            statusColor = "#e8eefc";
     }
 
     return `
@@ -88,7 +68,7 @@ function gameCardHTML(g){
                         <p class="TeamScore">${g.away_score ?? 0}</p>
 
                         <div class = "game-center">
-                            <div class="game-status">${statusText}</div>
+                            <div class="game-status" style="color: ${statusColor}">${statusText}</div>
                             <div class="at-symbol">@</div>
                         </div>
 

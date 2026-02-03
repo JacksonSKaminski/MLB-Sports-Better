@@ -36,65 +36,6 @@ input[type="date"] {
     font-size: 14px;
 }
 
-.container {
-    background: #2e302e;
-    max-width: 1100px;
-    margin: 10px auto;
-    padding: 16px;
-    border-radius: 16px;
-    cursor: pointer;
-}
-
 .site-footer {
     color: #b1b1b1;
-}
-
-.card {
-  margin: 10px;
-  padding: 12px;
-  border-radius: 5px;
-  border: 2px solid #ffffff84;
-
-  display: flex;
-  align-items: center;
-  gap: 5px;              /* spacing between the 3 sections */
-
-  font-size: 20px;
-  font-weight: bolder;
-}
-
-/* Left and right groups */
-.card .side {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  width: 35%;           /* SAME width on both sides */
-}
-
-/* Push right side contents to the right */
-.card .side.home {
-  justify-content: flex-end;
-}
-
-.card .container-center {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 50px;
-}
-
-/* Make logo sizes consistent */
-.card img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  flex: 0 0 64px;
-}
-
-/* Optional: prevent text wrapping causing shifts */
-.TeamAbrev, .TeamScore {
-  white-space: nowrap;
 }
