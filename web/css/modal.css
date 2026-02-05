@@ -13,7 +13,7 @@
 .modal {
   background: #2e302e;
   width: min(900px, 100%);
-  height: min(800px, 100%);
+  height: min(600px, 100%);
   border: 2px solid #ffffff84;
   border-radius: 16px;
   padding: 10px;
@@ -36,11 +36,11 @@
   cursor: pointer;
 }
 
-
+/*
 .hidden {
   display: none;
 }
-
+*/
 
 .gameId {
   margin-right: auto;
@@ -49,8 +49,7 @@
 .modalBody {
   display: flex;
   flex-direction: column;
-  height:80vh;
-}
+ }
 
 .topSection {
   gap:9.5%;
@@ -100,40 +99,4 @@
 
 .modalTeamStats > * {
   margin: 5px;
-}
-
-.bottom-section {
-  height:30%;
-  transition: height 0.3s ease;
-  display:flex;
-  flex-direction: column;
-}
-
-.bottom-header {
-  display: flex;
-  justify-content: center;
-}
-
-.bottom-header button {
-  background: #2e302e;
-  border: none;
-  cursor: pointer;
-}
-
-.bottom-section.expanded {
-  height: 50%;
-}
-
-.bottom-body {
-  border-radius: 7px;
-  background: #282928;
-  flex: 1;
-  display: flex;
-}
-
-.betting,
-.ai {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
 }
