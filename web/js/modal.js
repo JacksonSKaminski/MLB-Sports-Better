@@ -2,6 +2,8 @@ export function createModal(){
     const overlay = document.querySelector('[data-js="modal-overlay"]');
     const closeBtn = document.querySelector('[data-js="modal-close"]');
     const gameIdEl = document.querySelector('[data-js="modal-game-id"]');
+    const predictBtn = document.querySelector('[data-js="modal-predict-btn"]');
+    const predictionResponseText = document.querySelector('[data-js="modal-prediction-results"]');
 
     if (!overlay || !closeBtn) {
         console.error("Modal elements missing in HTML");
@@ -18,10 +20,14 @@ export function createModal(){
 
         if (gameIdEl) gameIdEl.textContent = `GameId: ${game.game_id}`;
 
+        
         overlay.classList.remove("is-hidden");
         isOpen = true;
 
         closeBtn.focus();
+
+        predictionResponseText.classList.add("is-hidden")
+        predictBtn.classList.remove("is-hidden");
     }
 
     function close() {
@@ -30,7 +36,13 @@ export function createModal(){
         lastActiveEl?.focus();
     }
 
+    function predict() {
+        predictionResponseText.classList.remove("is-hidden")
+        predictBtn.classList.add("is-hidden");
+    }
+
     closeBtn.addEventListener("click", close);
+    predictBtn.addEventListener("click", predict);
     overlay.addEventListener("click", (e) => {
         if (e.target === overlay) close();
     });
