@@ -22,7 +22,7 @@ body {
     margin: 10px;
 }
 
-.site-header h1 {
+.site-header__title {
     margin:0;
     margin-right: auto;
 }
