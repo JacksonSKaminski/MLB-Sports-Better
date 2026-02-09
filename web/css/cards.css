@@ -1,13 +1,4 @@
-.container {
-    background: #2e302e;
-    max-width: 1100px;
-    margin: 10px auto;
-    padding: 16px;  
-    border-radius: 16px;
-}
-
-
-.card {
+.game-card {
   cursor: pointer;
 
   margin: 10px;
@@ -24,7 +15,7 @@
 }
 
 /* Left and right groups */
-.card .side {
+.game-card__side {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -32,11 +23,11 @@
 }
 
 /* Push right side contents to the right */
-.card .side.home {
+.game-card__side--home {
   justify-content: flex-end;
 }
 
-.card .container-center {
+.game-card__center {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -47,19 +38,14 @@
 }
 
 /* Make logo sizes consistent */
-.card img {
+.game-card__logo {
   width: 100px;
   height: 100px;
   object-fit: contain;
   flex: 0 0 64px;
 }
 
-/* Optional: prevent text wrapping causing shifts */
-.TeamAbrev, .TeamScore {
-  white-space: nowrap;
-}
-
-.game-card{
+.game-card__side{
   background-image: linear-gradient(
     125deg,
     var(--away) 0%,

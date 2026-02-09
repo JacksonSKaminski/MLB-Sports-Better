@@ -40,11 +40,11 @@
   cursor: pointer;
 }
 
-/*
-.hidden {
+
+.is-hidden {
   display: none;
 }
-*/
+
 
 
 .modal__body {

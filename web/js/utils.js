@@ -1,4 +1,4 @@
-const gameDateInput = document.getElementById("gameDate");
+const gameDateInput = document.getElementById("game-date");
 
 export function setTodayAsDefault() {
     const today = new Date();

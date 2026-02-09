@@ -1,5 +1,5 @@
-const gameDateInput = document.getElementById("gameDate");
-const gamesGrid = document.getElementById("gamesGrid")
+const gameDateInput = document.getElementById("game-date");
+const gamesGrid = document.querySelector('[data-js="games-grid"]');
 
 import { getTeamById } from "./teams.js";
 import { setTodayAsDefault } from "./utils.js";
