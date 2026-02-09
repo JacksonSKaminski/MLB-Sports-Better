@@ -47,13 +47,13 @@
 */
 
 
-
-.modalBody {
+.modal__body {
   display: flex;
   flex-direction: column;
  }
 
-.topSection {
+.modal__top {
+  gap:10px;
   gap:9.5%;
   display:flex;
   flex-direction: row;
@@ -62,7 +62,17 @@
   overflow-y: auto;
 }
 
-.gameDisplayContainer {
+.team-card--away {
+  background-image: linear-gradient(125deg, red 0%,red 25%,#2e302e 50%);
+}
+
+.team-card--home {
+  background-image: linear-gradient(235deg, #FF5910 0%,#FF5910 25%,#2e302e 50%);
+}
+
+.team-card {
+  flex: 0 0 auto;
+
   width:27%;
   display:flex;
   flex-direction: column;
@@ -71,34 +81,27 @@
   padding-bottom: 10px;
 }
 
-#modalAwayTeam {
-  background-image: linear-gradient(125deg, red 0%,red 25%,#2e302e 50%);
-}
-
-#modalHomeTeam {
-  background-image: linear-gradient(235deg, #FF5910 0%,#FF5910 25%,#2e302e 50%);
-}
-
-.gameDisplayContainer img {
+.team-card img {
   width: 80%;
 }
 
-.gameDisplayInformation {
+.matchup-card {
+  flex:1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.gameDisplayInformation > * {
+.matchup-card > * {
   margin: 5px;
 }
 
-.modalTeamStats {
+.team-card__stats {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.modalTeamStats > * {
+.team-card__stats > * {
   margin: 5px;
 }
