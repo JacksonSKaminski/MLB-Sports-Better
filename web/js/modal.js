@@ -14,6 +14,8 @@ export function createModal(){
     function open(game, openerEl = null) {
         lastActiveEl = openerEl || document.activeElement;
 
+        console.log(gameIdEl);
+
         if (gameIdEl) gameIdEl.textContent = `GameId: ${game.game_id}`;
 
         overlay.classList.remove("is-hidden");
