@@ -9,3 +9,15 @@ export function setTodayAsDefault() {
     const formatted = `${year}-${month}-${day}`;
     gameDateInput.value = formatted;
 }
+
+export function ISOtoTime(ISOTimestamp){
+    const date = new Date(ISOTimestamp);
+
+    const localTime = date.toLocaleTimeString([], {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12 : true
+    });
+
+    return localTime
+}
