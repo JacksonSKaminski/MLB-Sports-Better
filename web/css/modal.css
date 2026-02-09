@@ -40,10 +40,11 @@
   cursor: pointer;
 }
 
-
+/*
 .is-hidden {
   display: none;
 }
+*/
 
 .modal__body {
   display: flex;
@@ -114,4 +115,12 @@
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  height:100%;
 }
