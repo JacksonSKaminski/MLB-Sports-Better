@@ -58,3 +58,15 @@
 .TeamAbrev, .TeamScore {
   white-space: nowrap;
 }
+
+.game-card{
+  background-image: linear-gradient(
+    125deg,
+    var(--away) 0%,
+    var(--away) 10%,
+    #2e302e 25%,
+    #2e302e 75%,
+    var(--home) 90%,
+    var(--home) 100%
+  );
+}

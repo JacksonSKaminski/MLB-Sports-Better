@@ -21,14 +21,18 @@
   position: relative;
 }
 
-.modalHeader {
+.modal__header {
   display: flex;
   align-items: center;
   color: #ffffff84;
   font-size: 12px;
 }
 
-.modal-close {
+.modal__game-id {
+  margin-right: auto;
+}
+
+.modal__close {
   background:transparent;
   border: none;
   color: #e8eefc;
@@ -42,9 +46,7 @@
 }
 */
 
-.gameId {
-  margin-right: auto;
-}
+
 
 .modalBody {
   display: flex;

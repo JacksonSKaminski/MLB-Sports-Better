@@ -46,43 +46,35 @@ function gameCardHTML(g){
     }
 
     return `
-        <article class = "card" data-gameid="${g.game_id}" style="
-            background-image: linear-gradient(
-                125deg, 
-                ${awayTeam.primary} 0%,
-                ${awayTeam.primary} 10%,
-                #2e302e 25%,
-                #2e302e 75%,
-                ${homeTeam.primary} 90%,
-                ${homeTeam.primary} 100%
-            );
-        "
-    >
-                <!-- Away team -->
-                    <div class="side away">
-                        <img src="${awayTeam.logo}" class="teamImage">
-                        <p class="TeamAbrev">${awayTeam.abbr}</p>
-                    </div>
+        <article class="game-card"
+            data-game-id="${g.game_id}"
+            style="--away:${awayTeam.primary}; --home:${homeTeam.primary};"
+        >
 
-                    <div class="container-center">
-                        <p class="TeamScore">${g.away_score ?? 0}</p>
+        <div class="game-card__side game-card__side--away">
+            <img class="game-card__logo" src="${awayTeam.logo}" alt="${awayTeam.name} logo">
+            <p class="game-card__abbr">${awayTeam.abbr}</p>
+        </div>
 
-                        <div class = "game-center">
-                            <div class="game-status" style="color: ${statusColor}">${statusText}</div>
-                            <div class="at-symbol">@</div>
-                        </div>
+        <div class="game-card__center">
+            <p class="game-card__score">${g.away_score ?? 0}</p>
 
-                        <p class="TeamScore">${g.home_score ?? 0}</p>
-                    </div>
+            <div class="game-card__meta">
+                <div class="game-card__status is-live" style="color: ${statusColor}">${statusText}</div>
+                <div class="game-card__vs">@</div>
+            </div>
 
-                <!-- Home team -->
-                    <div class="side home">
-                        <p class="TeamAbrev">${homeTeam.abbr}</p>
-                        <img src="${homeTeam.logo}" class="teamImage">
-                    </div>
+            <p class="game-card__score">${g.home_score ?? 0}</p>
+        </div>
 
-        </article>
-    `
+        <div class="game-card__side game-card__side--home">
+            <p class="game-card__abbr">${homeTeam.abbr}</p>
+            <img class="game-card__logo" src="${homeTeam.logo}" alt="${homeTeam.name} logo">
+        </div>
+
+    </article>
+`;
+
 }
 
 async function loadGames(dateStr) {
