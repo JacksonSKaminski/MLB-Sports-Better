@@ -56,6 +56,6 @@
 }
 
 .game-card__status.is-live { color: #ff0000; }
-.game-card__status.is-final { color: #e8eefc; }
+.game-card__status.is-final { color: #e8eefcab; }
 .game-card__status.is-scheduled { color: #e8eefc; }
 .game-card__status.is-neutral { color: #e8eefc; }
