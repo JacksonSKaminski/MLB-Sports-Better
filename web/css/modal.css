@@ -19,6 +19,9 @@
   padding: 10px;
   padding-top: 0px;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__header {
@@ -26,6 +29,8 @@
   align-items: center;
   color: #ffffff84;
   font-size: 12px;
+
+  flex: 0 0 auto;
 }
 
 .modal__game-id {
@@ -47,9 +52,10 @@
 */
 
 .modal__body {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  height:90%;
  }
 
 .modal__top {
@@ -59,8 +65,8 @@
   flex-direction: row;
   justify-content: center;
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  height:100%;
 }
 
 .team-card--away {
@@ -110,17 +116,76 @@
 
 .modal__bottom {
   flex: 1;
-  overflow-y: auto;
+  min-height: 0;
+
+  overflow: hidden;
+  gap:12px;
 
   display:flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.modal__betting, .modal__prediction{
+  flex: 1;
+  min-height: 0;
+  margin: 60px 20px 60px 20px;
 }
 
 .market-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: .25fr 1fr 1fr;
+
+  gap:4px;
+
   height:100%;
+  width:100%;
+  
+  align-items: center;
+}
+
+.market-grid > *{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.market__head {
+  color: rgba(255, 255, 255, 0.642);
+  font-size: 12px;
+}
+
+.market__card {
+  border: solid 2px rgb(110, 110, 110);
+  border-radius: 10px;
+  background-color: #3a3b3a;
+
+  height:100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.market__card > *{
+  margin: 0;
+}
+
+.market__card h3 {
+  color: rgb(65, 99, 249);
+  font-size: 15px;
+}
+
+.market__card p {
+  color: rgba(255, 255, 255, 0.642);
+  font-size: 12px;
+}
+
+.market__card__name {
+  display:flex;
+  align-items: center;
+  justify-content: left;
+
+  font-weight: bold;
 }
