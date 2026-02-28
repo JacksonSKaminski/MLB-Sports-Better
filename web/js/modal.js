@@ -42,14 +42,12 @@ export function createModal(){
         awayBox.querySelector(".team-card__logo").src = awayTeam.logo;
         awayBox.querySelector(".team-card__logo").alt = `${awayTeam.name} logo`;
         awayBox.querySelector(".team-card__name").textContent = awayTeam.name;
-        awayBox.querySelector(".team-card__record").textContent = `${g.away_wins ?? "-"}-${g.away_losses ?? "-"}`;
 
         // Home side
         const homeBox = document.querySelector('[data-js="home-team"]');
         homeBox.querySelector(".team-card__logo").src = homeTeam.logo;
         homeBox.querySelector(".team-card__logo").alt = `${homeTeam.name} logo`;
         homeBox.querySelector(".team-card__name").textContent = homeTeam.name;
-        homeBox.querySelector(".team-card__record").textContent = `${g.home_wins ?? "-"}-${g.home_losses ?? "-"}`;
 
         // Middle matchup info
         const meta = document.querySelector('[data-js="game-meta"]');

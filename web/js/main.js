@@ -13,7 +13,7 @@ async function loadGames(dateStr, gamesGridEL) {
         currentGames = games;
 
         if(!games.length) {
-            gamesGridEL.innerHTML=`No Games Found for ${dateStr}`;
+            gamesGridEL.innerHTML=`No Games Found`;
             return;
         }
 
